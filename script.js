@@ -64,7 +64,12 @@ const app = new Vue(
                 } 
                 console.log(this.todos)
                 this.newTodo = '';
-            }   
+            },
+            
+            //BONUS-2
+            changeTodo(i){
+                this.todos[i].done = !this.todos[i].done
+            }
         }
     }
 
