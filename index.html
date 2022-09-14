@@ -19,6 +19,21 @@
     <div id="app">
         <div class="container">
 
+            <h1>La mia Lista</h1>
+
+            <div class="todo-container">
+
+                <ul>
+                    <li v-for="(todo , i) in todos">
+                       
+                       <span @click="deleteTodo(i)" > {{ todo.text }}<s> ciao</s></span>  
+                    </li>
+                </ul>
+
+
+
+            </div>
+
 
 
         </div>
