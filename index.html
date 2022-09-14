@@ -21,8 +21,10 @@
             
             <h1>La mia Lista</h1>
 
-            <div class="todo-container">
-                <input type="text" v-model="newTodo" placeholder="inserisci lista">
+            <div class="todo-container">    <!--------BONUS-------->
+                <input type="text" v-model="newTodo" placeholder="inserisci lista" @keyUp.enter="addTodo">
+                
+
                 <button @click="addTodo" >Aggiungi</button>
 
                 <ul>
