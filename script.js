@@ -28,6 +28,7 @@ const app = new Vue(
                 text: 'Preparare la cena',
                 done: true,
                 },
+                
             ]
         },
         methods: {
@@ -47,16 +48,25 @@ const app = new Vue(
              },
 
             addTodo () {
-                const toDoToInsert = this.newTodo.trim();
-                this.newTodo = '';
-                if (toDoToInsert.length > 0){
+                const toDoToInsert = {
+                    text:this.newTodo.trim(),
+                    done:false,
+                }
+
+                
+                console.log(toDoToInsert)
+                if (toDoToInsert){
                     this.todos.push(toDoToInsert);
                     
                 }else {
                     console.log('non hai inserito nulla')
-                }
-            }
+
+                } 
+                console.log(this.todos)
+                this.newTodo = '';
+            }   
         }
     }
 
 )
+
